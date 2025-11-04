@@ -1,38 +1,62 @@
-\.App {
-  text-align: center;
+.image {
+    width: 90px;
+    height: 90px;
+    padding: 30px;
+    padding-left: 100px;
+}
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+.hamburger {
+    position: fixed;
+    right: -100px;
+}
+#hams {
+    width: 85px;
+    height: 85px;
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+.hambar {
+    width: 60px;
+    height: 10px;
+    background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hoverham {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hams:hover{ 
+    background-color: #dddddd;
+    border-radius: 50px;
+    transition-duration: 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#hams:hover .hamsecond {
+    opacity: 0;;
 }
-
-.App-link {
-  color: #61dafb;
+#hams:hover .hamfirst {
+    position: absolute;
+    top: 45px;
+    transform: rotate(135deg);
+    transition-duration: 1s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#hams:hover .hamthird {
+    transform: rotate(-135deg);
+    transition-duration: 1s;
 }
